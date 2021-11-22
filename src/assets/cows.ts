@@ -1,10 +1,10 @@
 export type Cow = {
   name: string;
-  birthDate: string;
+  birthdate: string;
   registerNumber: string;
   breed: string;
   color: string;
-  info: string;
+  information: string;
 };
 
 export type Production = {
@@ -12,54 +12,56 @@ export type Production = {
   litersPerDay: number;
 };
 
+export type CowWithProduction = Cow & Production;
+
 export const cowsWithProduction: (Cow & Production)[] = [
   {
     name: 'Mansikki',
-    birthDate: '2015-01-01',
+    birthdate: '2015-01-01',
     registerNumber: '0d192as83d201y2',
     breed: 'Angus',
     color: 'Brown',
-    info: '',
+    information: '',
     litersPerWeek: 130,
     litersPerDay: 20,
   },
   {
     name: 'Mustikki',
-    birthDate: '2015-01-01',
+    birthdate: '2015-01-01',
     registerNumber: '0d192as83d201ys',
     breed: 'Angus',
     color: 'Brown',
-    info: '',
+    information: '',
     litersPerWeek: 130,
     litersPerDay: 20,
   },
   {
     name: 'Heluna',
-    birthDate: '2015-01-01',
+    birthdate: '2015-01-01',
     registerNumber: '0d192as83d201y1',
     breed: 'Angus',
     color: 'Brown',
-    info: '',
+    information: '',
     litersPerWeek: 130,
     litersPerDay: 20,
   },
   {
     name: 'Kolina',
-    birthDate: '2015-01-01',
+    birthdate: '2015-01-01',
     registerNumber: '0d192as83d201yd',
     breed: 'Angus',
     color: 'Brown',
-    info: '',
+    information: '',
     litersPerWeek: 130,
     litersPerDay: 20,
   },
   {
     name: 'Valio',
-    birthDate: '2015-01-01',
+    birthdate: '2015-01-01',
     registerNumber: '0d192as83d201ya',
     breed: 'Angus',
     color: 'Brown',
-    info: '',
+    information: '',
     litersPerWeek: 130,
     litersPerDay: 20,
   },

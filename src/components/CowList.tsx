@@ -5,9 +5,18 @@ import { Cow, Production } from '../assets/cows';
 import { ReactComponent as CowFace } from '../assets/lehma.svg';
 
 type CowListProps = {
-  cowsWithProduction: (Cow & Production)[];
+  cows: (Cow & Production)[];
   onButtonClick: () => void;
 };
+
+const Container = styled.div`
+  margin: 1em;
+  max-width: 1000px;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  alignitems: center;
+`;
 
 const StyledH1 = styled.h1`
   color: #173272;
@@ -22,47 +31,67 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-const CowList = ({ cowsWithProduction, onButtonClick }: CowListProps) => {
+const StyledTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+`;
+
+const StyledTR = styled.tr`
+  :nth-child(even) {
+    background: rgba(20, 177, 227, 0.4);
+  }
+`;
+
+const StyledTH = styled.th`
+  text-align: left;
+`;
+
+const StyledTD = styled.td`
+  text-align: left;
+`;
+
+const CowList = ({ cows, onButtonClick }: CowListProps) => {
   return (
-    <div style={{ margin: '1em' }}>
+    <Container>
       <div
         style={{
-          maxWidth: '1000px',
-          margin: '1em auto',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          width: '100%',
         }}>
         <StyledH1>Lehmät</StyledH1>
         <StyledButton type="button" onClick={onButtonClick}>
           Lisää lehmä
         </StyledButton>
       </div>
-      <table>
+      <StyledTable>
         <thead>
           <tr>
-            <td></td>
-            <td>Nimi</td>
-            <td>Tilastot</td>
-            <td>l / vko</td>
-            <td>l / vrk</td>
+            <StyledTH></StyledTH>
+            <StyledTH>Nimi</StyledTH>
+            <StyledTH>Tilastot</StyledTH>
+            <StyledTH>l / vko</StyledTH>
+            <StyledTH>l / vrk</StyledTH>
           </tr>
         </thead>
         <tbody>
-          {cowsWithProduction.map((cow) => (
-            <tr>
-              <td>
-                <CowFace style={{ width: 50, height: 50 }} />
-              </td>
-              <td>{cow.name}</td>
-              <td>-</td>
-              <td>{cow.litersPerWeek}</td>
-              <td>{cow.litersPerDay}</td>
-            </tr>
+          {cows.map((cow) => (
+            <StyledTR key={cow.registerNumber}>
+              <StyledTD>
+                <CowFace
+                  style={{ width: 50, height: 55, verticalAlign: 'middle' }}
+                />
+              </StyledTD>
+              <StyledTD>{cow.name}</StyledTD>
+              <StyledTD>-</StyledTD>
+              <StyledTD>{cow.litersPerWeek}</StyledTD>
+              <StyledTD>{cow.litersPerDay}</StyledTD>
+            </StyledTR>
           ))}
         </tbody>
-      </table>
-    </div>
+      </StyledTable>
+    </Container>
   );
 };
 
