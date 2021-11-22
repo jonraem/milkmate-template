@@ -1,18 +1,4 @@
-export type Cow = {
-  name: string;
-  birthdate: string;
-  registerNumber: string;
-  breed: string;
-  color: string;
-  information: string;
-};
-
-export type Production = {
-  litersPerWeek: number;
-  litersPerDay: number;
-};
-
-export type CowWithProduction = Cow & Production;
+import type { CowWithProduction } from '../types/common';
 
 /**
  * The types are very explicitly defined, just to be careful. Production is separate from the Cow

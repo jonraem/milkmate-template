@@ -1,7 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import { ReactComponent as CowFace } from '../assets/lehma.svg';
 import { ReactComponent as MilkMateLogo } from '../assets/milkmate_logo.svg';
-import styled from 'styled-components';
 
 type HeaderProps = { username: string | undefined };
 

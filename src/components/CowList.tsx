@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Cow, Production } from '../assets/cows';
 import { ReactComponent as CowFace } from '../assets/lehma.svg';
+import type { CowWithProduction } from '../types/common';
 
 type CowListProps = {
-  cows: (Cow & Production)[];
+  cows: CowWithProduction[];
   onButtonClick: () => void;
 };
 

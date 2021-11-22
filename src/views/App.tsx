@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import CowList from '../components/CowList';
 import CowForm from '../components/CowForm';
-import { CowWithProduction, cowsWithProduction } from '../assets/cows';
+import { cowsWithProduction } from '../assets/cows';
+import type { CowWithProduction } from '../types/common';
 
 const user = {
   name: 'Jussi Maajussi',

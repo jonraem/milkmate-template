@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import type { CowWithProduction } from '../assets/cows';
 import { ReactComponent as CowFace } from '../assets/lehma.svg';
+import type { CowWithProduction } from '../types/common';
 
 type CowFormProps = {
   onCancelButtonClick: () => void;
