@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import CowList from '../components/CowList';
 import CowForm from '../components/CowForm';
+import { cowsWithProduction } from '../assets/cows';
 
 const user = {
   name: 'Jussi Maajussi',
@@ -21,7 +22,10 @@ const App = () => {
       <Header username={user?.name} />
       <main>
         {appMode === AppMode.VIEW && (
-          <CowList onButtonClick={() => setAppMode(AppMode.EDIT)} />
+          <CowList
+            cowsWithProduction={cowsWithProduction}
+            onButtonClick={() => setAppMode(AppMode.EDIT)}
+          />
         )}
         {appMode === AppMode.EDIT && (
           <CowForm onButtonClick={() => setAppMode(AppMode.VIEW)} />
