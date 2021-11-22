@@ -14,7 +14,11 @@ export type Production = {
 
 export type CowWithProduction = Cow & Production;
 
-export const cowsWithProduction: (Cow & Production)[] = [
+/**
+ * The types are very explicitly defined, just to be careful. Production is separate from the Cow
+ * type itself because it is expected to come from another source based on the cow's id.
+ */
+export const cowsWithProduction: CowWithProduction[] = [
   {
     name: 'Mansikki',
     birthdate: '2015-01-01',

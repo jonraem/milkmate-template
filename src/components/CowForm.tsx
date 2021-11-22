@@ -73,6 +73,10 @@ const StyledSubmit = styled.input`
   cursor: pointer;
 `;
 
+/**
+ * Here lies the cow form. The styles are very fleshed out, so those may be the first one to cut.
+ * The submit function also has very rudimentary validation, which will also be cut when no time.
+ */
 const CowForm = ({
   onCancelButtonClick,
   onSubmitButtonClick,

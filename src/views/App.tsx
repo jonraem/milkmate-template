@@ -14,7 +14,10 @@ enum AppMode {
   EDIT,
 }
 
-// Here I gather the basic components of the UI and/or any routes I may use
+/**
+ * Here I gather the basic components of the UI and/or any routes I may use. In this example the
+ * view merely has two modes handled by local state. The data comes from a static array.
+ */
 const App = () => {
   const [appMode, setAppMode] = useState<AppMode>(AppMode.VIEW);
   const [cows, setCows] = useState<CowWithProduction[]>(cowsWithProduction);

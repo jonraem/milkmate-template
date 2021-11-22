@@ -14,7 +14,9 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// Here I would add any Providers I use in the application.
+/**
+ * Here I would add any Providers I use in the application.
+ */
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />

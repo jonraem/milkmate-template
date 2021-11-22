@@ -50,6 +50,11 @@ const StyledTD = styled.td`
   text-align: left;
 `;
 
+/**
+ * Here lies the cow list. There are some styles which are usually the first ones to be implemented.
+ * Important thing is that the list doesn't contain the data itself and instead renders what is
+ * given to it. It is fine, however, to know the type of the data. (Which cells are in the table.)
+ */
 const CowList = ({ cows, onButtonClick }: CowListProps) => {
   return (
     <Container>
